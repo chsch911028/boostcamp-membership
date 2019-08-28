@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/signup.css" />
+
+    <script src="../js/index.js"></script>
+    <title>회원가입</title>
+    <style>
+      #container {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+      }
+
+      #main {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+      }
+
+      .signup-title {
+        text-align: center;
+        font-size: 1.5rem;
+        color: #00c73c;
+        font-weight: 900;
+        margin: 20px 0px;
+      }
+
+      .singup-item {
+        margin: 10px 0;
+      }
+
+      .singup-item-label {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .singup-hint {
+        margin-top: 15px;
+      }
+
+      .signup-input-box {
+        display: block;
+        height: 50px;
+        width: 100%;
+        border: 1px solid #dddddd;
+      }
+
+      .signup-input-box input,
+      .signup-input-box-sm input {
+        width: 100%;
+        height: 100%;
+        font-size: 1.05rem;
+      }
+
+      .signup-input-list-box {
+        display: flex;
+      }
+
+      .signup-input-box-sm {
+        height: 50px;
+        width: 33.33%;
+        margin-left: 10px;
+        border: 1px solid #dddddd;
+      }
+
+      .signup-input-box-sm:nth-of-type(1) {
+        margin: 0;
+      }
+
+      .signup-input-box select,
+      .signup-input-box-sm select {
+        width: 100%;
+        height: 100%;
+        font-size: 1.05rem;
+      }
+
+      .singup-button-box {
+        height: 50px;
+        width: 50%;
+        margin-left: 10px;
+        background: #00c73c;
+        color: white;
+      }
+
+      .singup-button-box:nth-of-type(1) {
+        margin: 0;
+      }
+
+      .singup-button-box button {
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      input:focus,
+      select:focus {
+        outline: none;
+        border: 1px solid #00c73c;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <section id="main">
+        <h3 class="signup-title">회원가입</h3>
+        <!-- 아이디 -->
+        <div class="singup-item">
+          <label class="singup-item-label block" for="id">아이디</label>
+          <span class="signup-input-box">
+            <input name="id" type="text" />
+          </span>
+          <div class="singup-hint"></div>
+        </div>
+        <!-- 비밀번호 -->
+        <div class="singup-item">
+          <label class="singup-item-label block" for="pwd">비밀번호</label>
+          <span class="signup-input-box">
+            <input name="pwd" type="text" />
+          </span>
+          <div class="singup-hint"></div>
+        </div>
+        <!-- 비밀번호 재확인 -->
+        <div class="singup-item">
+          <label class="singup-item-label block" for="pwd-checker"
+            >비밀번호 재확인</label
+          >
+          <span class="signup-input-box">
+            <input name="pwd-checker" type="text" />
+          </span>
+          <div class="singup-hint"></div>
+        </div>
+        <!-- 이름 -->
+        <div class="singup-item">
+          <label class="singup-item-label block" for="name">이름</label>
+          <span class="signup-input-box">
+            <input name="name" type="text" />
+          </span>
+          <div class="singup-hint"></div>
+        </div>
+        <!-- 생년월일 -->
+        <div class="singup-item">
+          <label class="singup-item-label block" for="birth-year"
+            >생년월일</label
+          >
+          <div class="signup-input-list-box">
+            <span class="signup-input-box-sm">
+              <input name="birth-year" type="text" />
+            </span>
+            <span class="signup-input-box-sm">
+              <select name="birth-month">
+                <option value="" selected>월</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+            </span>
+            <span class="signup-input-box-sm">
+              <input name="birth-date" type="text" />
+            </span>
+          </div>
+          <div class="singup-hint"></div>
+        </div>
+        <!-- 성별 -->
+        <div class="singup-item">
+          <label class="singup-item-label block" for="name">성별</label>
+          <span class="signup-input-box">
+            <select name="name">
+              <option value="" selected>성별</option>
+              <option value="1">남자</option>
+              <option value="2">여자</option>
+            </select>
+          </span>
+          <div class="singup-hint"></div>
+        </div>
+        <!-- 이메일 -->
+        <div class="singup-item">
+          <label class="singup-item-label block" for="email">이메일</label>
+          <span class="signup-input-box">
+            <input name="email" type="email" />
+          </span>
+          <div class="singup-hint"></div>
+        </div>
+        <!-- 휴대전화 -->
+        <div class="singup-item">
+          <label class="singup-item-label block" for="phone">휴대전화</label>
+          <span class="signup-input-box">
+            <input name="phone" type="tel" />
+          </span>
+          <div class="singup-hint"></div>
+        </div>
+        <!-- 관심사 -->
+        <div class="singup-item">
+          <label class="singup-item-label block" for="interest">관심사</label>
+          <span class="signup-input-box">
+            <input name="interest" type="text" />
+          </span>
+          <div class="singup-hint"></div>
+        </div>
+        <!-- 약관 동의 -->
+        <div class="singup-item">
+          <label class="singup-item-label inline-block" for="interest"
+            >약관에 동의합니다.</label
+          >
+          <input name="interest" type="checkbox" />
+        </div>
+        <!-- 초기화/가입하기 버튼 -->
+        <div class="singup-item">
+          <div class="signup-input-list-box">
+            <div class="singup-button-box"><button>초기화</button></div>
+            <div class="singup-button-box"><button>가입하기</button></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
